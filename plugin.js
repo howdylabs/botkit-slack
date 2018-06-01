@@ -385,7 +385,6 @@ module.exports = function(botkit) {
         return new Promise(function(resolve, reject) {
           var found_team = null;
 
-
           var team_id = payload.team_id || (payload.team && payload.team.id) || null;
           botkit.db.slack_teams.findOne({id:team_id},function(err, team) {
               if (team) {
