@@ -62,7 +62,7 @@ module.exports = function(botkit) {
             url: '/admin/slack',
             method: 'get',
             handler: function(req, res) {
-                var relativePath = path.relative(process.cwd() + '/views', __dirname + '/views');
+              var relativePath = path.relative(botkit.LIB_PATH + '/../views', __dirname + '/views');
                 res.render(relativePath + '/config');
             }
         },
@@ -70,7 +70,7 @@ module.exports = function(botkit) {
           url: '/slack/configure',
           method: 'get',
           handler: function(req, res) {
-              var relativePath = path.relative(process.cwd() + '/views', __dirname + '/views');
+            var relativePath = path.relative(botkit.LIB_PATH + '/../views', __dirname + '/views');
               res.render(relativePath + '/config');
           }
         },
